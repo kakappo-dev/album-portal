@@ -133,7 +133,7 @@ y.callService(
 {$ELEMENT_CONTENT}
 
 {if isset($COMMENT_IMG)}
-<div class="imageComment markdown-body" style="text-align:left;margin:45px;">
+<div class="imageComment markdown-body" style="text-align:left;margin:20px;">
 {$COMMENT_IMG}
 </div>
 {/if}
