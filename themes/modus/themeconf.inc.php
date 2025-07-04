@@ -252,7 +252,7 @@ function modus_thumbs($x, $smarty)
 
 	if (!empty($notes)) {?>
 </ul>
-<h1>Note</h1>
+<h1 class="thumbnails">Note</h1>
 <ul class="thumbnails" id="notes">
 <?=implode("\n", $notes);?>
 <?php

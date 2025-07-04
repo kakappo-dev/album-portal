@@ -496,9 +496,10 @@ td .nbEntries{
 .markdown-body pre {
   background-color: #f6f8fa;
   border: 1px solid #e0e0e0;
-  padding: 0.8em; /* パディングを少し減らす */
-  border-radius: 3px; /* 角を少し丸く */
-  overflow-x: auto;
+  padding: 0.8em;
+  border-radius: 3px;
+  white-space: pre-wrap;
+  overflow: hidden;
   margin-bottom: 0.8em;
 }
 
