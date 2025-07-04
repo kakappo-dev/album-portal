@@ -186,10 +186,7 @@
 {if !empty($THUMBNAILS)}
 <div class="loader"><img src="{$ROOT_URL}{$themeconf.img_dir}/ajax_loader.gif"></div>
 
-<h1 class="thumbnails">= Image =</h1>
-<ul class="thumbnails" id="thumbnails">
-  {$THUMBNAILS}
-</ul>
+{$THUMBNAILS}
 
 {else if !empty($SEARCH_ID)}
 <div class="mcs-no-result">

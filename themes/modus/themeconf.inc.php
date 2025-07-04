@@ -181,7 +181,10 @@ function modus_css_resolution($params)
 
 $this->smarty->registerPlugin('function', 'modus_thumbs', 'modus_thumbs');
 function modus_thumbs($x, $smarty)
-{
+{?>
+<h1 class="thumbnails">= Image =</h1>
+<ul class="thumbnails" id="thumbnails">
+<?php
 	global $template, $page, $conf;
 
 	$default_params = $smarty->getTemplateVars('derivative_params');
@@ -265,7 +268,9 @@ function modus_thumbs($x, $smarty)
 
 	$my_base_name = basename(dirname(__FILE__));
 	// not async to avoid visible flickering reflow
-	$template->scriptLoader->add('modus.arange', 1, array('jquery'), 'themes/'.$my_base_name."/js/thumb.arrange.min.js", 0);
+	$template->scriptLoader->add('modus.arange', 1, array('jquery'), 'themes/'.$my_base_name."/js/thumb.arrange.min.js", 0);?>
+</ul>
+<?php
 }
 
 add_event_handler('loc_end_index', 'modus_on_end_index');
