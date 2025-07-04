@@ -6,6 +6,7 @@
 	text-align: center;	/* to center the whole collection in .content */
 }
 .thumbnails LI { display: inline }
+#notes.thumbnails { margin-left: 20%; }
 
 .thumbnails .wrap1 {
 	margin: 0 7px 5px 7px;

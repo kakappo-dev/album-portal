@@ -1,4 +1,5 @@
 {if !empty($album_thumb_size)}{* ================= modus mode ===*}
+<h1 class="thumbnails">= Album =</h1>
 <ul class="albThumbs" id="rv-at">
 {foreach from=$category_thumbnails item=item}
 <li>{strip}
