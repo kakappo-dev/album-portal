@@ -77,3 +77,5 @@ A:hover .pwg-icon:before{
 	width: 26px;
 }
 {/if}
+
+@import "../../../admin/themes/default/fontello/css/fontello.css";
