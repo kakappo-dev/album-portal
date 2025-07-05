@@ -35,15 +35,6 @@ A:hover .pwg-icon:before{
 .pwg-icon-caddie-add:before { content: '\E812';}
 .pwg-icon-representative { content: '\E80B'; }
 
-.pwg-icon-picture:before { content: '\e849'; }
-.pwg-icon-plus-circled:before { content: '\e84a'; }
-.pwg-icon-star:before { content: '\e847'; }
-.pwg-icon-tags:before { content: '\e84e'; }
-.pwg-icon-clock:before { content: '\e856'; }
-.pwg-icon-sitemap:before { content: '\f0e8'; }
-.pwg-icon-folder-open:before { content: '\e806'; }
-.pwg-icon-pencil:before { content: '\e84f'; }
-
 {if $conf.index_posted_date_icon}
   {if $conf.index_created_date_icon}
 .pwg-icon-calendar:before { content: '\E81B'; }
