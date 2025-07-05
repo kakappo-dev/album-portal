@@ -409,7 +409,6 @@ td .nbEntries{
  * Markdown
  */
 .markdown-body {
-  font-family: 'Segoe UI', 'BIZ UDGothic', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
   color: #333333;
   background-color: #ffffff;
   box-sizing: border-box;
@@ -470,7 +469,7 @@ td .nbEntries{
 
 /* 段落 */
 .markdown-body p {
-  margin-bottom: 0.8em; /* 段落の下の余白を減らす */
+  margin-bottom: 0.8em;
 }
 
 /* リンク */
@@ -505,11 +504,10 @@ td .nbEntries{
 
 /* インラインコード */
 .markdown-body code {
-  font-family: 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
-  font-size: 0.85em; /* フォントサイズを少し小さく */
+  font-size: 0.85em;
   color: #c7254e;
   background-color: #f9f2f4;
-  padding: 0.15em 0.3em; /* パディングを少し減らす */
+  padding: 0.15em 0.3em;
   border-radius: 2px;
 }
 
@@ -523,8 +521,8 @@ td .nbEntries{
 
 /* 引用 (blockquote) */
 .markdown-body blockquote {
-  border-left: 3px solid #ced4da; /* 左側の線を少し細く */
-  padding: 0.4em 0.8em; /* パディングを減らす */
+  border-left: 3px solid #ced4da;
+  padding: 0.4em 0.8em;
   margin: 0 0 0.8em 0;
   color: #6a737d;
   background-color: #f7f7f7;
@@ -535,13 +533,13 @@ td .nbEntries{
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 0.8em;
-  font-size: 0.9em; /* テーブルのフォントサイズを少し小さく */
+  font-size: 0.9em;
 }
 
 .markdown-body th,
 .markdown-body td {
   border: 1px solid #e0e0e0;
-  padding: 0.6em; /* パディングを減らす */
+  padding: 0.6em;
   text-align: left;
 }
 
@@ -555,16 +553,16 @@ td .nbEntries{
   max-width: 100%;
   height: auto;
   display: block;
-  margin: 0.8em auto; /* 上下の余白を減らす */
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08); /* 影を控えめに */
+  margin: 0.8em auto;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
   border-radius: 3px;
 }
 
 /* 水平線 */
 .markdown-body hr {
   border: none;
-  border-top: 1px solid #f0f0f0; /* 薄い線 */
-  margin: 1.5em 0; /* 上下の余白を減らす */
+  border-top: 1px solid #f0f0f0;
+  margin: 1.5em 0;
 }
 
 /* 太字と斜体 */
