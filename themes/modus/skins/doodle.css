@@ -210,8 +210,10 @@ fieldset legend{
 
 #comments input[type='text'],
 #comments textarea{
-  background-color:#6F4F28;
-  color:white;
+  background-color:#f8f8f8;
+  color:#666;
+  border-radius: 4px;
+  border: 1px solid #DDD;
 }
 
 .overDesc{
@@ -484,12 +486,10 @@ td .nbEntries{
 /* リスト */
 .markdown-body ol li {
   list-style-type: space-counter;
-  margin-bottom: 0.5em;
 }
 
 .markdown-body ul li {
   list-style-type: circle;
-  margin-bottom: 0.5em;
 }
 
 /* コードブロック */

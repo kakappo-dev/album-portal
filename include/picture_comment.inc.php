@@ -245,7 +245,9 @@ SELECT
         'AUTHOR_MANDATORY' => $conf['comments_author_mandatory'],
         'AUTHOR' =>           '',
         'WEBSITE_URL' =>      '',
-        'SHOW_EMAIL' =>       !is_classic_user() or empty($user['email']),
+        // TBD
+        //'SHOW_EMAIL' =>       !is_classic_user() or empty($user['email']),
+        'SHOW_EMAIL' =>       false,
         'EMAIL_MANDATORY' =>  $conf['comments_email_mandatory'],
         'EMAIL' =>            '',
         'SHOW_WEBSITE' =>     $conf['comments_enable_website'],
