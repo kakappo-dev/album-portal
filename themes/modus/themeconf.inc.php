@@ -181,10 +181,7 @@ function modus_css_resolution($params)
 
 $this->smarty->registerPlugin('function', 'modus_thumbs', 'modus_thumbs');
 function modus_thumbs($x, $smarty)
-{?>
-<h1 class="thumbnails">= Image =</h1>
-<ul class="thumbnails" id="thumbnails">
-<?php
+{
 	global $template, $page, $conf;
 
 	$default_params = $smarty->getTemplateVars('derivative_params');
@@ -218,6 +215,7 @@ function modus_thumbs($x, $smarty)
 
 	$new_icon = " <span class=albSymbol title=\"".l10n('posted on %s')."\">".MODUS_STR_RECENT.'</span>';
 
+	$images = array();
 	$notes = array();
 	foreach($smarty->getTemplateVars('thumbnails') as $item)
 	{
@@ -244,20 +242,30 @@ function modus_thumbs($x, $smarty)
 					 . "<a href='{$item['URL']}'{$a_style}>"
 					 . "<img src='{$c->get_url()}' width='{$csize[0]}' height='{$csize[1]}' alt='{$item['TN_ALT']}'>"
 					 . "<div>{$item['NAME']}</div></a></li>";
-        } elseif ($do_over) {?>
-<li class="path-ext-<?=$item["path_ext"]?> file-ext-<?=$item["file_ext"]?>" style=width:<?=$csize[0]?>px;height:<?=$row_height?>px><a href="<?=$item['URL']?>"<?=$a_style?>><img src="<?=$c->get_url()?>" width=<?=$csize[0]?> height=<?=$csize[1]?> alt="<?=$item['TN_ALT']?>"></a><div class=overDesc><?=$item['NAME']?><?=$new?></div></li>
-<?php
-		} else {?>
-<li class="path-ext-<?=$item["path_ext"]?> file-ext-<?=$item["file_ext"]?>" style=width:<?=$csize[0]?>px;height:<?=$row_height?>px><a href="<?=$item['URL']?>"<?=$a_style?>><img src="<?=$c->get_url()?>" width=<?=$csize[0]?> height=<?=$csize[1]?> alt="<?=$item['TN_ALT']?>"></a></li>
-<?php
+        } elseif ($do_over) {
+			$images[] = "<li class='path-ext-{$item["path_ext"]} file-ext-{$item["file_ext"]}' style='width:{$csize[0]}px;height:{$row_height}px;'>"
+					  . "<a href='{$item['URL']}'{$a_style}>"
+					  . "<img src='{$c->get_url()}' width={$csize[0]} height={$csize[1]} alt='{$item['TN_ALT']}'></a><div class=overDesc>{$item['NAME']}{$new}</div></li>";
+		} else {
+			$images[] = "<li class='path-ext-{$item["path_ext"]} file-ext-{$item["file_ext"]}' style='width:{$csize[0]}px;height:{$row_height}px;'>"
+					  . "<a href='{$item['URL']}'{$a_style}>"
+					  . "<img src='{$c->get_url()}' width={$csize[0]} height={$csize[1]} alt='{$item['TN_ALT']}'></a></li>";
 		}
 	}
 
+	if (!empty($images)) {?>
+<h1 class="thumbnails">= Image =</h1>
+<ul class="thumbnails" id="thumbnails">
+<?=implode("\n", $images);?>
+</ul>
+<?php
+	}
 	if (!empty($notes)) {?>
 </ul>
 <h1 class="thumbnails">= Note =</h1>
 <ul class="thumbnails" id="notes">
 <?=implode("\n", $notes);?>
+</ul>
 <?php
 	}
 
@@ -268,9 +276,7 @@ function modus_thumbs($x, $smarty)
 
 	$my_base_name = basename(dirname(__FILE__));
 	// not async to avoid visible flickering reflow
-	$template->scriptLoader->add('modus.arange', 1, array('jquery'), 'themes/'.$my_base_name."/js/thumb.arrange.min.js", 0);?>
-</ul>
-<?php
+	$template->scriptLoader->add('modus.arange', 1, array('jquery'), 'themes/'.$my_base_name."/js/thumb.arrange.min.js", 0);
 }
 
 add_event_handler('loc_end_index', 'modus_on_end_index');
