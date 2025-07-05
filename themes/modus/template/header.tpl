@@ -7,6 +7,7 @@
 {strip}{get_combined_css}
 {combine_css path="themes/`$themeconf.id`/css/base.css.tpl" version=$MODUS_CSS_VERSION template=true order=-10}
 {combine_css path="themes/`$themeconf.id`/css/iconfontello.css.tpl" version=$MODUS_CSS_VERSION template=true order=-10}
+{combine_css path="admin/themes/default/fontello/css/fontello.css" order=-10}
 {combine_css path="themes/`$themeconf.id`/css/menuh.css.tpl" version=$MODUS_CSS_VERSION template=true order=-10}
 {combine_css path="themes/`$themeconf.id`/css/index.css.tpl" version=$MODUS_CSS_VERSION template=true order=-10}
 {combine_css path="themes/`$themeconf.id`/css/picture.css.tpl" version=$MODUS_CSS_VERSION template=true order=-10}

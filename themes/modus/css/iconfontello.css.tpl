@@ -1,5 +1,4 @@
 @import "fontello/css/modus.css";
-@import "../../../admin/themes/default/fontello/css/fontello.css";
 
 A:hover .pwg-icon:before{
 	text-decoration: none !important; /* IE 8,9*/
