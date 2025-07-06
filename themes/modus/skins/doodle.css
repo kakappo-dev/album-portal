@@ -469,6 +469,7 @@ td .nbEntries{
 
 /* 段落 */
 .markdown-body p {
+  margin-left: 0.8em;
   margin-bottom: 0.8em;
 }
 
