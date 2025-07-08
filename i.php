@@ -445,12 +445,20 @@ if (strpos($page['src_location'], '/pwg_representative/')===false
 {
   try
   {
-    $query = '
+    if (basename($page['src_location']) == $conf['note_icon'])
+    {
+      $query = '
+SELECT *
+  FROM '.$prefixeTable.'images
+  WHERE path=\''.substr($page['src_location'], 2).'\'
+;';
+    } else {
+      $query = '
 SELECT *
   FROM '.$prefixeTable.'images
   WHERE path=\''.addslashes($page['src_location']).'\'
 ;';
-
+    }
     if ( ($row=pwg_db_fetch_assoc(pwg_query($query))) )
     {
       if (isset($row['width']))
